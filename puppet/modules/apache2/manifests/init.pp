@@ -21,7 +21,6 @@ class apache2::install {
 
   # the httpd.conf change the user/group that apache uses to run its process
   file { '/etc/apache2/conf-available/user.conf':
-    # source  => '/vagrant/files/etc/apache2/httpd.conf',
     source  => 'puppet:///modules/apache2/httpd.conf',
   }
   
