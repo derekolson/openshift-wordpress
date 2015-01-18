@@ -6,6 +6,8 @@
 # ruby, etc.
 dest_dir=${OPENSHIFT_REPO_DIR}wordpress
 
+[ ! -d "${dest_dir}" ] && exit 0
+
 if [ -d ${OPENSHIFT_REPO_DIR}php ]; then
   rm -rf ${OPENSHIFT_REPO_DIR}php
 fi
